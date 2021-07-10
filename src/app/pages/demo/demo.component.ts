@@ -28,7 +28,8 @@ import { TitleService } from '../../core/services/title.service';
 
 @Component({
   selector: 'app-demo-page',
-  templateUrl: 'demo.html'
+  templateUrl: 'demo.html',
+  styleUrls: ['demo.scss']
 })
 export class DemoComponent {
 

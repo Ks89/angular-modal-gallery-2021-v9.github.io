@@ -22,26 +22,10 @@
  * SOFTWARE.
  */
 
-import { Component } from '@angular/core';
+@import "theme";
 
-import { TitleService } from '../../core/services/title.service';
-
-@Component({
-  selector: 'app-features-page',
-  templateUrl: 'features.html',
-  styleUrls: ['features.scss']
-})
-export class FeaturesComponent {
-
-  title = 'Features';
-
-  constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.subscribe((val: string) => {
-      this.onUpdateTitle(val);
-    });
-  }
-
-  onUpdateTitle(event: string) {
-    this.title = event;
-  }
+#demo {
+  padding: 4rem 2rem 4rem 0;
+  border-radius: 0;
+  margin-bottom: 2rem;
 }

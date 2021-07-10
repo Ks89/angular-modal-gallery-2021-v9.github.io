@@ -28,7 +28,8 @@ import { Metadata, UiService } from '../../core/services/ui.service';
 
 @Component({
   selector: 'app-about-page',
-  templateUrl: 'about.html'
+  templateUrl: 'about.html',
+  styleUrls: ['about.scss']
 })
 
 export class AboutComponent implements OnInit {
