@@ -17,54 +17,76 @@
         <div class="table-responsive">
           <table class="table table-hover">
             <tbody>
-            <tr>
-              <td><b>@ks89/angular-modal-gallery</b>&nbsp;&nbsp;&nbsp;</td>
-              <td>angular</td>
-              <td>@angular/cdk</td>
-              <td>mousetrap</td>
-              <td>hammerjs</td>
-              <td>Font Awesome</td>
-            </tr>
-            <tr>
-              <td><b>3.3.5</b></td>
-              <td>2.0.0</td>
-              <td>not required</td>
-              <td>>=1.6.1</td>
-              <td>>=2.0.0</td>
-              <td>>= 4.0.0</td>
-            </tr>
-            <tr>
-              <td><b>5.7.1</b></td>
-              <td>4.0.0</td>
-              <td>not required</td>
-              <td>>=1.6.1</td>
-              <td>>=2.0.0</td>
-              <td>optional</td>
-            </tr>
-            <tr>
-              <td><b>6.3.0</b></td>
-              <td>5.0.0</td>
-              <td>not required</td>
-              <td>>=1.6.1</td>
-              <td>>=2.0.0</td>
-              <td>optional</td>
-            </tr>
-            <tr>
-              <td><b>7.2.5</b></td>
-              <td>6.0.0<br>7.0.0<br>8.0.0<br>9.0.0*<br>10.0.0*<br>11.0.0*</td>
-              <td>6.0.0<br>7.0.0<br>8.0.0<br>9.0.0*<br>10.0.0*<br>11.0.0*</td>
-              <td>>=1.6.1</td>
-              <td>>=2.0.0</td>
-              <td>optional</td>
-            </tr>
-            <tr>
-              <td><b>8.0.0 (recommended)</b></td>
-              <td><b>12.0.0</b></td>
-              <td><b>12.0.0</b></td>
-              <td><b>>=1.6.1</b></td>
-              <td><b>>=2.0.0</b></td>
-              <td><b>optional</b></td>
-            </tr>
+              <tr>
+                <td><b>@ks89/angular-modal-gallery</b></td>
+                <td>angular</td>
+                <td>@angular/cdk</td>
+                <td>mousetrap</td>
+                <td>hammerjs</td>
+                <td>Font Awesome</td>
+                <td>IE11 support</td>
+                <td>Microsoft Edge (pre-chromium) support</td>
+              </tr>
+              <tr>
+                <td><b>3.3.5</b></td>
+                <td>2.0.0</td>
+                <td>not required</td>
+                <td>>=1.6.1</td>
+                <td>>=2.0.0</td>
+                <td>>= 4.0.0</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><b>5.7.1</b></td>
+                <td>4.0.0</td>
+                <td>not required</td>
+                <td>>=1.6.1</td>
+                <td>>=2.0.0</td>
+                <td>optional</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><b>6.3.0</b></td>
+                <td>5.0.0</td>
+                <td>not required</td>
+                <td>>=1.6.1</td>
+                <td>>=2.0.0</td>
+                <td>optional</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><b>7.2.5</b></td>
+                <td>6.0.0<br>7.0.0<br>8.0.0<br>9.0.0*<br>10.0.0*<br>11.0.0*</td>
+                <td>6.0.0<br>7.0.0<br>8.0.0<br>9.0.0*<br>10.0.0*<br>11.0.0*</td>
+                <td>>=1.6.1</td>
+                <td>>=2.0.0</td>
+                <td>optional</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><b>8.0.0</b></td>
+                <td>12.0.0</td>
+                <td>12.0.0</td>
+                <td>>=1.6.1</td>
+                <td>>=2.0.0</td>
+                <td>optional</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><b>9.0.0 (recommended)</b></td>
+                <td><b>13.0.0</b></td>
+                <td><b>13.0.0</b></td>
+                <td><b>>=1.6.1</b></td>
+                <td><b>>=2.0.0</b></td>
+                <td><b>optional</b></td>
+                <td>No</td>
+                <td>No</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -79,17 +101,14 @@
 
       <section class="container">
         <h2>Supported Browsers</h2>
-        <p>All versions of this library support modern browsers and Internet Explorer 11.</p>
-
-        <p>However, try to understand that I cannot support Internet Explorer 11 forever.
-          This is a very old and obsolete, so you should ask to your users to use a modern browser.</p>
+        <p>Starting from version 9.0.0 of this library, Internet Explorer 11 and legacy Microsoft Edge (pre-chromium) are not supported!</p>
       </section>
       <br>
 
       <section class="container">
         <h2>Installation</h2>
         <p>Based on the table above, install the required dependencies.</p>
-        <p>For <strong>@ks89/angular-modal-gallery 8</strong> run</p>
+        <p>For <strong>@ks89/angular-modal-gallery 9</strong> run</p>
         <ul>
           <li><code>npm i --save @ks89/angular-modal-gallery@latest</code></li>
           <li><code>npm i --save @angular/cdk hammerjs mousetrap</code></li>
@@ -216,7 +235,7 @@
       <section id="examples" class="container">
         <h2>Official examples</h2>
         <ul>
-          <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-12">angular-cli 12 (recommended)</a></li>
+          <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-13">angular-cli 13 (recommended)</a></li>
           <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-material">angular-cli with material</a></li>
           <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/universal">angular-universal</a></li>
           <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/stackblitz">live examples on stackblitz.com</a></li>
