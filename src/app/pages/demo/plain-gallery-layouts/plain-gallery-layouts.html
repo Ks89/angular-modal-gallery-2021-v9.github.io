@@ -1,0 +1,111 @@
+<div class="container">
+  <h2 class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Plain gallery layouts</a>
+  </h2>
+  <p>Plain gallery with different layouts.</p>
+  <br>
+
+  <h3>Live Demo</h3>
+  <br>
+  <section>
+    <h4>Plain gallery layout (limit 2) and custom size</h4>
+    <br>
+    <ks-plain-gallery [id]="200" [images]="images" [showGallery]="true"
+                      [config]="libConfigPlainGalleryRow"
+                      (showImage)="onShow(200, $event)"></ks-plain-gallery>
+  </section>
+  <section>
+    <h4>Plain gallery row layout space around (limit 2)</h4>
+    <br>
+    <ks-plain-gallery [id]="201" [images]="images" [showGallery]="true"
+                      [config]="libConfigPlainGalleryRowSpaceAround"
+                      (showImage)="onShow(201, $event)"></ks-plain-gallery>
+  </section>
+  <section>
+    <h4>Plain gallery column layout (limit 3)</h4>
+    <br>
+    <ks-plain-gallery [id]="202" [images]="images" [showGallery]="true"
+                      [config]="libConfigPlainGalleryColumn"
+                      (showImage)="onShow(202, $event)"></ks-plain-gallery>
+  </section>
+  <section>
+    <h4>Plain gallery grid layout and custom size</h4>
+    <br>
+    <ks-plain-gallery [id]="203" [images]="images" [showGallery]="true"
+                      [config]="libConfigPlainGalleryGrid"
+                      (showImage)="onShow(203, $event)"></ks-plain-gallery>
+  </section>
+  <br><br>
+
+  <section>
+    <h3>Code</h3>
+    <br>
+    <h4>Template</h4>
+    <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
+    </codemirror>
+    <br>
+    <h4>Typescript</h4>
+    <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
+    </codemirror>
+  </section>
+
+  <br><br>
+
+  <section>
+    <h3>Details</h3>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+        <tr>
+          <th>Input (.html)</th>
+          <th>Value (.ts)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>id</code></td>
+          <td>
+            <div><i>Value: </i><code>NUMERIC UNIQUE ID</code></div>
+            <div><b class="text-success">Unique id</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>images</code></td>
+          <td>
+            <div><i>Value: </i><code>Image[]</code></div>
+            <div><b class="text-success">Array of <code>Image</code> objects</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>libConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>LibConfig</code></div>
+            <div><b class="text-success"><code>LibConfig</code> object to config the library. See below.</b></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h4>LibConfig</h4>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+        <tr>
+          <th>Input</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>plainGalleryConfig</code></td>
+          <td>
+            <div><i>Value: </i>see above</div>
+            <div>Plain gallery with different layouts</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
