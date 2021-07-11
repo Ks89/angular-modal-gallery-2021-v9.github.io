@@ -25,8 +25,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {
-  AdvancedLayout,
-  Image, LibConfig,
+  Image,
   ModalGalleryRef,
   ModalGalleryService,
   PlainGalleryConfig,
@@ -52,11 +51,6 @@ export class PlainGalleryImagePointerComponent implements OnInit {
   codeHtml: string;
   codeTypescript: string;
   codeSass: string;
-
-  customPlainGalleryRowConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
 
   constructor(private uiService: UiService,
               private modalGalleryService: ModalGalleryService,
@@ -88,22 +82,13 @@ export class PlainGalleryImagePointerComponent implements OnInit {
     this.codeTypescript = `
 constructor(private modalGalleryService: ModalGalleryService) {}
 
-customPlainGalleryRowConfig: PlainGalleryConfig = {
-  strategy: PlainGalleryStrategy.CUSTOM,
-  layout: new AdvancedLayout(-1, true)
-};
-
 openImageModalRow(id: number, image: Image): void {
   console.log('Opening modal gallery from custom plain gallery row, with image: ', image);
   const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-  this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(index, true) });
   const dialogRef: ModalGalleryRef = this.modalGalleryService.open({
     id,
     images: this.images,
-    currentImage: this.images[index],
-    libConfig: {
-      plainGalleryConfig: this.customPlainGalleryRowConfig
-    }
+    currentImage: this.images[index]
   }) as ModalGalleryRef;
 }
 
@@ -155,14 +140,10 @@ private getCurrentIndexCustomLayout(image: Image, images: Image[]): number {
   openImageModalRow(id: number, image: Image): void {
     console.log('Opening modal gallery from custom plain gallery row, with image: ', image);
     const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(index, true) });
     const dialogRef: ModalGalleryRef = this.modalGalleryService.open({
       id,
       images: this.images,
-      currentImage: this.images[index],
-      libConfig: {
-      plainGalleryConfig: this.customPlainGalleryRowConfig
-    }
+      currentImage: this.images[index]
     }) as ModalGalleryRef;
   }
 

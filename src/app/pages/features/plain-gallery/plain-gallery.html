@@ -214,20 +214,7 @@
           <i>Type: </i><code>PlainGalleryLayout</code>
         </div>
         <div>
-          <p>It can be either <code>LineLayout</code>,
-            <code>GridLayout</code> or <code>AdvancedLayout</code> to configure the thumbnail's layout.</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td><small><code>advanced</code></small></td>
-      <td>
-        <div>
-          <i>Type: </i><code>AdvancedConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-        </div>
-        <div>
-          <p>Optional object used to configure <code>AdvancedLayout</code>.
-            It will be ignored with both <code>LineLayout</code> and <code>GridLayout</code>.</p>
+          <p>It can be either <code>LineLayout</code> and <code>GridLayout</code> to configure the thumbnail's layout.</p>
         </div>
       </td>
     </tr>
@@ -239,8 +226,7 @@
   <h2 id="PlainGalleryLayout" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">PlainGalleryLayout</a>
   </h2>
-  <p>Empty interface implemented by both <code>LineLayout</code>,
-    <code>GridLayout</code>, <code>AdvancedLayout</code>.</p>
+  <p>Empty interface implemented by both <code>LineLayout</code> and <code>GridLayout</code>.</p>
   <br>
 
   <h2 id="LineLayout" class="link clickable">
@@ -314,40 +300,6 @@
         </div>
         <div>
           <p>Object to change the size of thumbnails. <code>width: 50px</code> and <code>height: auto</code> by default.</p>
-        </div>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-
-  <br>
-
-  <h2 id="AdvancedLayout" class="link clickable">
-    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">AdvancedLayout</a>
-  </h2>
-  <p>Class to configure a custom plain gallery.</p>
-  <br>
-  <table class="table table-hover table-sm">
-    <tbody>
-    <tr>
-      <td><small><code>modalOpenerByIndex</code></small></td>
-      <td>
-        <div>
-          <i>Type: </i><code>number</code>
-        </div>
-        <div>
-          <p>Index of the image to open as current image of the modal gallery.</p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td><small><code>hideDefaultPlainGallery</code></small></td>
-      <td>
-        <div>
-          <i>Type: </i><code>boolean</code>
-        </div>
-        <div>
-          <p>If <code>true</code>, default plain gallery is hidden, otherwise not. It's really recommended to use always <code>true</code>.</p>
         </div>
       </td>
     </tr>
