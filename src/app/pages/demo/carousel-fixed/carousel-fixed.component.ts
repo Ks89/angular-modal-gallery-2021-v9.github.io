@@ -50,7 +50,7 @@ export class CarouselFixedComponent implements OnInit {
 
     this.codeHtml =
       `  <ks-carousel [id]="109" [images]="images"
-  [carouselConfig]="{maxWidth: '766px', maxHeight: '400px', showArrows: true, objectFit: 'cover', keyboardEnable: true, modalGalleryEnable: true, legacyIE11Mode: false}"
+  [carouselConfig]="{maxWidth: '766px', maxHeight: '400px', showArrows: true, objectFit: 'cover', keyboardEnable: true, modalGalleryEnable: true}"
   [previewConfig]="{visible: true, number: 5, width: 'auto', maxHeight: '100px'}"></ks-carousel>`;
 
     this.codeTypescript =

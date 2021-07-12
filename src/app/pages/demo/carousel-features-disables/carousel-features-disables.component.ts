@@ -71,7 +71,7 @@ export class CarouselFeaturesDisablesComponent implements OnInit {
     <ks-carousel [id]="108" [images]="imagesRect"
   [playConfig]="{autoPlay: autoPlay, interval: 3000, pauseOnHover: true}"
   [carouselConfig]="{maxWidth: '100%', maxHeight: '400px', showArrows: showArrows,
-                     objectFit: 'cover', keyboardEnable: true, modalGalleryEnable: false, legacyIE11Mode: false}"
+                     objectFit: 'cover', keyboardEnable: true, modalGalleryEnable: false}"
   [dotsConfig]="{visible: showDots}"></ks-carousel>`;
 
     this.codeTypescript =
