@@ -24,11 +24,12 @@
 
 import { Component, OnInit } from '@angular/core';
 
+import { CarouselLibConfig, Image } from '@ks89/angular-modal-gallery';
+
 import { IMAGES_RECT_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
-import { Image } from '@ks89/angular-modal-gallery';
 
 @Component({
   selector: 'app-carousel-no-infinite-page',
@@ -43,15 +44,23 @@ export class CarouselNoInfiniteComponent implements OnInit {
   codeHtml: string;
   codeTypescript: string;
 
+  libConfig: CarouselLibConfig = {
+    carouselSlideInfinite: false
+  };
+
   constructor(private uiService: UiService,
               private titleService: TitleService) {
     this.titleService.titleEvent.emit('Examples - Carousel no infinite');
 
     this.codeHtml =
-      `  <ks-carousel [id]="103" [images]="images" [infinite]="false"></ks-carousel>`;
+      `  <ks-carousel [id]="103" [images]="images" [config]="libConfig"></ks-carousel>`;
 
     this.codeTypescript =
-      `  images: Image[]; // init this value with your images`;
+      `  images: Image[]; // init this value with your images
+
+  libConfig: CarouselLibConfig = {
+    carouselSlideInfinite: false
+  };`;
   }
 
   ngOnInit(): void {

@@ -25,7 +25,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {
-  Image, LibConfig, ModalGalleryConfig,
+  Image, ModalLibConfig, ModalGalleryConfig,
   ModalGalleryRef,
   ModalGalleryService, PreviewConfig
 } from '@ks89/angular-modal-gallery';
@@ -71,7 +71,7 @@ export class PreviewsNotClickableComponent implements OnInit {
           visible: true,
           clickable: false
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -90,7 +90,7 @@ export class PreviewsNotClickableComponent implements OnInit {
           visible: true,
           clickable: false
         } as PreviewConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

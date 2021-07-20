@@ -29,7 +29,7 @@ import {
   ButtonsStrategy,
   ButtonType,
   Image,
-  LibConfig, ModalGalleryConfig, ModalGalleryRef,
+  ModalLibConfig, ModalGalleryConfig, ModalGalleryRef,
   ModalGalleryService
 } from '@ks89/angular-modal-gallery';
 
@@ -82,7 +82,7 @@ export class ButtonsExturlNewtabComponent implements OnInit {
             }
           ]
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -108,7 +108,7 @@ export class ButtonsExturlNewtabComponent implements OnInit {
             } as ButtonConfig
           ]
         } as ButtonsConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

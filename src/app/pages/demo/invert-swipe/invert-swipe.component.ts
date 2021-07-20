@@ -25,7 +25,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {
-  Image, LibConfig, ModalGalleryConfig,
+  Image, ModalLibConfig, ModalGalleryConfig,
   ModalGalleryRef,
   ModalGalleryService
 } from '@ks89/angular-modal-gallery';
@@ -73,7 +73,7 @@ export class InvertSwipeComponent implements OnInit {
         currentImageConfig: {
           invertSwipe: true
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -91,7 +91,7 @@ export class InvertSwipeComponent implements OnInit {
         currentImageConfig: {
           invertSwipe: true
         } as CurrentImageConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

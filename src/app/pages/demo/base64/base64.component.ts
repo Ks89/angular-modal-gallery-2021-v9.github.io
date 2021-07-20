@@ -31,7 +31,7 @@ import {
   ButtonsStrategy,
   CurrentImageConfig,
   Image,
-  LibConfig,
+  ModalLibConfig,
   ModalGalleryConfig,
   ModalGalleryRef, ModalGalleryService
 } from '@ks89/angular-modal-gallery';
@@ -202,7 +202,7 @@ export class Base64Component implements OnInit {
           visible: true,
           strategy: ButtonsStrategy.SIMPLE
         } as ButtonsConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

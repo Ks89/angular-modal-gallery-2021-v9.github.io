@@ -26,7 +26,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {
   Image,
-  LibConfig,
+  ModalLibConfig,
   ModalGalleryConfig,
   ModalGalleryRef,
   ModalGalleryService
@@ -71,7 +71,7 @@ export class CloseOusideComponent implements OnInit {
       currentImage: this.images[imageIndex],
       libConfig: {
         enableCloseOutside: false
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -87,7 +87,7 @@ export class CloseOusideComponent implements OnInit {
       currentImage: this.images[imageIndex],
       libConfig: {
         enableCloseOutside: false
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

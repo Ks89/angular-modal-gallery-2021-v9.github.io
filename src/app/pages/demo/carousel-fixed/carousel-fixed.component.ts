@@ -24,11 +24,12 @@
 
 import { Component, OnInit } from '@angular/core';
 
+import { CarouselLibConfig, Image } from '@ks89/angular-modal-gallery';
+
 import { IMAGES_RECT_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
-import { Image } from '@ks89/angular-modal-gallery';
 
 @Component({
   selector: 'app-fixed-width-page',
@@ -43,18 +44,50 @@ export class CarouselFixedComponent implements OnInit {
   codeHtml: string;
   codeTypescript: string;
 
+  libConfigCarouselFixed: CarouselLibConfig = {
+    carouselPreviewsConfig: {
+      visible: true,
+      number: 5,
+      width: 'auto',
+      maxHeight: '100px'
+    },
+    carouselConfig: {
+      maxWidth: '766px',
+      maxHeight: '400px',
+      showArrows: true,
+      objectFit: 'cover',
+      keyboardEnable: true,
+      modalGalleryEnable: true
+    }
+  };
+
   constructor(private uiService: UiService,
               private titleService: TitleService) {
 
     this.titleService.titleEvent.emit('Examples - Carousel width fixed width');
 
     this.codeHtml =
-      `  <ks-carousel [id]="109" [images]="images"
-  [carouselConfig]="{maxWidth: '766px', maxHeight: '400px', showArrows: true, objectFit: 'cover', keyboardEnable: true, modalGalleryEnable: true}"
-  [previewConfig]="{visible: true, number: 5, width: 'auto', maxHeight: '100px'}"></ks-carousel>`;
+      `  <ks-carousel [id]="109" [images]="images" [config]="libConfigCarouselFixed"></ks-carousel>`;
 
     this.codeTypescript =
-      `  images: Image[]; // init this value with your images`;
+      `  images: Image[]; // init this value with your images
+
+  libConfigCarouselFixed: CarouselLibConfig = {
+    carouselPreviewsConfig: {
+      visible: true,
+      number: 5,
+      width: 'auto',
+      maxHeight: '100px'
+    },
+    carouselConfig: {
+      maxWidth: '766px',
+      maxHeight: '400px',
+      showArrows: true,
+      objectFit: 'cover',
+      keyboardEnable: true,
+      modalGalleryEnable: true
+    }
+  };`;
   }
 
   ngOnInit(): void {

@@ -25,7 +25,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {
-  Image, LibConfig,
+  Image, PlainLibConfig,
   LineLayout,
   ModalGalleryRef,
   ModalGalleryService,
@@ -51,7 +51,7 @@ export class PlainGalleryAtagsComponent implements OnInit {
   codeHtml: string;
   codeTypescript: string;
 
-  libConfigPlainGalleryRowATags: LibConfig = {
+  libConfigPlainGalleryRowATags: PlainLibConfig = {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.ROW,
       layout: new LineLayout({width: '50px', height: '50px'}, {length: 4, wrap: true}, 'flex-start'),
@@ -66,14 +66,14 @@ export class PlainGalleryAtagsComponent implements OnInit {
     this.titleService.titleEvent.emit(`Examples - Plain gallery with <a> tags`);
 
     this.codeHtml =
-      `<ks-plain-gallery [id]="204" [images]="images" [showGallery]="true"
+      `<ks-plain-gallery [id]="204" [images]="images"
                     [config]="libConfigPlainGalleryRowATags"
                     (showImage)="onShow(204, $event)"></ks-plain-gallery>`;
 
     this.codeTypescript = `
   constructor(private modalGalleryService: ModalGalleryService) {}
 
-  libConfigPlainGalleryRowATags: LibConfig = {
+  libConfigPlainGalleryRowATags: PlainLibConfig = {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.ROW,
       layout: new LineLayout({width: '50px', height: '50px'}, {length: 4, wrap: true}, 'flex-start'),

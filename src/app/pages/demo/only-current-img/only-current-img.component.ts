@@ -29,7 +29,7 @@ import {
   ButtonsStrategy,
   DotsConfig,
   Image,
-  LibConfig,
+  ModalLibConfig,
   ModalGalleryConfig,
   ModalGalleryRef,
   ModalGalleryService,
@@ -91,7 +91,7 @@ export class OnlyCurrentImgComponent implements OnInit {
           visible: false,
           strategy: ButtonsStrategy.DEFAULT
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -122,7 +122,7 @@ export class OnlyCurrentImgComponent implements OnInit {
           visible: false,
           strategy: ButtonsStrategy.DEFAULT
         } as ButtonsConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

@@ -50,14 +50,14 @@ export class CarouselOutputsComponent implements OnInit {
 
     this.codeHtml =
       `  <ks-carousel [id]="114" [images]="images"
-  (showImage)="onShowImage($event)"
+  (changeImage)="onChangeImage($event)"
   (firstImage)="onFirstImage($event)"
   (lastImage)="onLastImage($event)"></ks-carousel>`;
 
     this.codeTypescript =
       `  images: Image[]; // init this value with your images
   // output events
-  onShowImage(event: ImageEvent) {
+  onChangeImage(event: ImageEvent) {
     console.log('showImage', event);
   }
 
@@ -81,8 +81,8 @@ export class CarouselOutputsComponent implements OnInit {
   }
 
   // output events
-  onShowImage(event: ImageEvent) {
-    console.log('showImage', event);
+  onChangeImage(event: ImageEvent) {
+    console.log('show', event);
   }
 
   onFirstImage(event: ImageEvent) {

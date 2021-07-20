@@ -24,11 +24,12 @@
 
 import { Component, OnInit } from '@angular/core';
 
+import { CarouselLibConfig, Image } from '@ks89/angular-modal-gallery';
+
 import { IMAGES_RECT_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
-import { Image } from '@ks89/angular-modal-gallery';
 
 @Component({
   selector: 'app-carousel-with-description-page',
@@ -43,16 +44,31 @@ export class CarouselWithDescriptionComponent implements OnInit {
   codeHtml: string;
   codeTypescript: string;
 
+  libConfig: CarouselLibConfig = {
+    carouselImageConfig: {
+      description: {
+        strategy: 2
+      }
+    }
+  };
+
   constructor(private uiService: UiService,
               private titleService: TitleService) {
     this.titleService.titleEvent.emit('Examples - Carousel with description');
 
     this.codeHtml =
-      `  <ks-carousel [id]="113" [images]="images"
-  [carouselImageConfig]="{description: {strategy: 2}}"></ks-carousel>`;
+      `  <ks-carousel [id]="113" [images]="images" [config]="libConfig"></ks-carousel>`;
 
     this.codeTypescript =
-      `  images: Image[]; // init this value with your images`;
+      `  images: Image[]; // init this value with your images
+
+  libConfig: CarouselLibConfig = {
+    carouselImageConfig: {
+      description: {
+        strategy: 2
+      }
+    }
+  };`;
   }
 
   ngOnInit(): void {

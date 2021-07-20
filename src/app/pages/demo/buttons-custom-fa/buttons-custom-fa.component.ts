@@ -30,7 +30,7 @@ import {
   ButtonsStrategy,
   ButtonType,
   Image,
-  LibConfig,
+  ModalLibConfig,
   ModalGalleryConfig,
   ModalGalleryRef, ModalGalleryService
 } from '@ks89/angular-modal-gallery';
@@ -152,7 +152,7 @@ export class ButtonsCustomFaComponent implements OnInit, OnDestroy {
         currentImageConfig: {
           downloadable: true
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
 
     // required to enable ADD button
@@ -198,7 +198,7 @@ export class ButtonsCustomFaComponent implements OnInit, OnDestroy {
         currentImageConfig: {
           downloadable: true
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
 
     // required to enable ADD button

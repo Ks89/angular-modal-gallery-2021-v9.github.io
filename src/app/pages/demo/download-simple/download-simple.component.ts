@@ -26,7 +26,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {
   CurrentImageConfig,
-  Image, LibConfig, ModalGalleryConfig,
+  Image, ModalLibConfig, ModalGalleryConfig,
   ModalGalleryRef,
   ModalGalleryService
 } from '@ks89/angular-modal-gallery';
@@ -72,7 +72,7 @@ export class DownloadSimpleComponent implements OnInit {
         currentImageConfig: {
           downloadable: true
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -90,7 +90,7 @@ export class DownloadSimpleComponent implements OnInit {
         currentImageConfig: {
           downloadable: true
         } as CurrentImageConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

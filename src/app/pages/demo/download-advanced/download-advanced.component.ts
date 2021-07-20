@@ -28,7 +28,9 @@ import {
   ButtonsConfig,
   ButtonsStrategy,
   CurrentImageConfig,
-  Image, LibConfig, ModalGalleryConfig,
+  Image,
+  ModalLibConfig,
+  ModalGalleryConfig,
   ModalGalleryRef,
   ModalGalleryService
 } from '@ks89/angular-modal-gallery';
@@ -77,7 +79,7 @@ export class DownloadAdvancedComponent implements OnInit {
           visible: true,
           strategy: ButtonsStrategy.SIMPLE
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -99,7 +101,7 @@ export class DownloadAdvancedComponent implements OnInit {
           visible: true,
           strategy: ButtonsStrategy.SIMPLE
         } as ButtonsConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

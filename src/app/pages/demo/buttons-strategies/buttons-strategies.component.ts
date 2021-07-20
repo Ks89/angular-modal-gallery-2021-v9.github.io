@@ -31,7 +31,7 @@ import {
   ButtonsConfig,
   ButtonsStrategy, ButtonType,
   Image,
-  LibConfig, ModalGalleryConfig, ModalGalleryRef,
+  ModalLibConfig, ModalGalleryConfig, ModalGalleryRef,
   ModalGalleryService
 } from '@ks89/angular-modal-gallery';
 
@@ -126,7 +126,7 @@ export class ButtonsStrategiesComponent implements OnInit, OnDestroy {
         currentImageConfig: {
           downloadable: true
         },
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
 
     // required to enable DELETE button
@@ -170,7 +170,7 @@ export class ButtonsStrategiesComponent implements OnInit, OnDestroy {
         currentImageConfig: {
           downloadable: true
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
 
     // required to enable DELETE button

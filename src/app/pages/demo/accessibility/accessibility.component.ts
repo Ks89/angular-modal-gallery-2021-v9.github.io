@@ -26,7 +26,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {
   AccessibilityConfig,
-  Image, LibConfig, ModalGalleryConfig,
+  Image, ModalLibConfig, ModalGalleryConfig,
   ModalGalleryRef, ModalGalleryService
 } from '@ks89/angular-modal-gallery';
 
@@ -159,7 +159,7 @@ export class AccessibilityComponent implements OnInit {
       currentImage: this.images[imageIndex],
       libConfig: {
         accessibilityConfig: this.accessibilityConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -175,7 +175,7 @@ export class AccessibilityComponent implements OnInit {
       currentImage: this.images[imageIndex],
       libConfig: {
         accessibilityConfig: this.accessibilityConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

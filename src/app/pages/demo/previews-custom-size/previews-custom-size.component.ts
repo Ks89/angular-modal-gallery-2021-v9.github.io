@@ -26,7 +26,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {
   Image,
-  LibConfig,
+  PlainLibConfig,
   ModalGalleryConfig,
   ModalGalleryRef,
   ModalGalleryService,
@@ -79,7 +79,7 @@ export class PreviewsCustomSizeComponent implements OnInit {
             height: 'auto'
           }
         }
-      } as LibConfig
+      } as PlainLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
     }
@@ -101,7 +101,7 @@ export class PreviewsCustomSizeComponent implements OnInit {
             height: 'auto'
           } as Size
         } as PreviewConfig
-      } as LibConfig
+      } as PlainLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

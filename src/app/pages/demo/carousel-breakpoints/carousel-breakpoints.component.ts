@@ -24,11 +24,12 @@
 
 import { Component, OnInit } from '@angular/core';
 
+import { CarouselLibConfig, Image } from '@ks89/angular-modal-gallery';
+
 import { IMAGES_RECT_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
-import { Image } from '@ks89/angular-modal-gallery';
 
 @Component({
   selector: 'app-carousel-breakpoints',
@@ -45,25 +46,88 @@ export class CarouselBreakpointsComponent implements OnInit {
   codeHtml2: string;
   codeTypescript2: string;
 
+  libConfig1: CarouselLibConfig = {
+    carouselPreviewsConfig: {
+      visible: true,
+      breakpoints: {
+        xSmall: 50,
+        small: 60,
+        medium: 80,
+        large: 150,
+        xLarge: 180
+      }
+    }
+  };
+  libConfig2: CarouselLibConfig = {
+    carouselPreviewsConfig: {
+      visible: true,
+      breakpoints: {
+        xSmall: 50,
+        small: 60,
+        medium: 70,
+        large: 80,
+        xLarge: 100
+      }
+    },
+    carouselConfig: {
+      maxWidth: '500px',
+      maxHeight: '400px',
+      showArrows: true,
+      objectFit: 'cover',
+      keyboardEnable: true,
+      modalGalleryEnable: false
+    }
+  };
+
   constructor(private uiService: UiService,
               private titleService: TitleService) {
 
     this.titleService.titleEvent.emit('Examples - Carousel custom breakpoints');
 
     this.codeHtml =
-      `  <ks-carousel [id]="115" [images]="images"
-    [previewConfig]="{visible: true, breakpoints: {xSmall: 50, small: 60, medium: 80, large: 150, xLarge: 180}}"></ks-carousel>`;
+      `  <ks-carousel [id]="115" [images]="images" [config]="libConfig1"></ks-carousel>`;
 
     this.codeTypescript =
       `  images: Image[]; // init this value with your images`;
 
     this.codeHtml2 =
-      `  <ks-carousel [id]="116" [images]="images"
-    [carouselConfig]="{maxWidth: '500px', maxHeight: '400px', showArrows: true, objectFit: 'cover', keyboardEnable: true, modalGalleryEnable: false, legacyIE11Mode: false}"
-    [previewConfig]="{visible: true, breakpoints: {xSmall: 50, small: 60, medium: 70, large: 80, xLarge: 100}}"></ks-carousel>`;
+      `  <ks-carousel [id]="116" [images]="images" [config]="libConfig2"></ks-carousel>`;
 
     this.codeTypescript2 =
-      `  images: Image[]; // init this value with your images`;
+      `  images: Image[]; // init this value with your images
+
+  libConfig1: CarouselLibConfig = {
+    carouselPreviewsConfig: {
+      visible: true,
+      breakpoints: {
+        xSmall: 50,
+        small: 60,
+        medium: 80,
+        large: 150,
+        xLarge: 180
+      }
+    }
+  };
+  libConfig2: CarouselLibConfig = {
+    carouselPreviewsConfig: {
+      visible: true,
+      breakpoints: {
+        xSmall: 50,
+        small: 60,
+        medium: 70,
+        large: 80,
+        xLarge: 100
+      }
+    },
+    carouselConfig: {
+      maxWidth: '500px',
+      maxHeight: '400px',
+      showArrows: true,
+      objectFit: 'cover',
+      keyboardEnable: true,
+      modalGalleryEnable: false
+    }
+  };`;
   }
 
   ngOnInit(): void {

@@ -26,7 +26,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {
   Image,
-  LibConfig,
+  ModalLibConfig,
   ModalGalleryConfig,
   ModalGalleryRef, ModalGalleryService, PlayConfig
 } from '@ks89/angular-modal-gallery';
@@ -77,7 +77,7 @@ export class ModalAutoplayMinimalComponent implements OnInit {
             pauseOnHover: true
           }
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -99,7 +99,7 @@ export class ModalAutoplayMinimalComponent implements OnInit {
             pauseOnHover: true
           } as PlayConfig
         } as SlideConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

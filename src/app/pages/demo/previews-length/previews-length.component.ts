@@ -26,7 +26,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {
   Image,
-  LibConfig,
+  PlainLibConfig,
   ModalGalleryConfig,
   ModalGalleryRef,
   ModalGalleryService,
@@ -75,7 +75,7 @@ export class PreviewsLengthComponent implements OnInit {
           visible: true,
           number: 1
         }
-      } as LibConfig
+      } as PlainLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -94,7 +94,7 @@ export class PreviewsLengthComponent implements OnInit {
           visible: true,
           number: 1
         } as PreviewConfig
-      } as LibConfig
+      } as PlainLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

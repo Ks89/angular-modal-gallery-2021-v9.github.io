@@ -26,7 +26,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {
   CurrentImageConfig, Image,
-  LibConfig,
+  ModalLibConfig,
   ModalGalleryConfig,
   ModalGalleryRef,
   ModalGalleryService
@@ -78,7 +78,7 @@ export class InfiniteSlidingComponent implements OnInit {
             show: false
           }
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -99,7 +99,7 @@ export class InfiniteSlidingComponent implements OnInit {
             show: false
           } as SidePreviewsConfig
         } as CurrentImageConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

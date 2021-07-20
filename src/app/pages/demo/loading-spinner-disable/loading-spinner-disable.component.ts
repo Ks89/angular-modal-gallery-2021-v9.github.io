@@ -27,7 +27,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   CurrentImageConfig,
   Image,
-  LibConfig,
+  ModalLibConfig,
   LoadingType,
   ModalGalleryConfig,
   ModalGalleryRef,
@@ -79,7 +79,7 @@ export class LoadingSpinnerDisableComponent implements OnInit {
             type: LoadingType.STANDARD
           }
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -100,7 +100,7 @@ export class LoadingSpinnerDisableComponent implements OnInit {
             type: LoadingType.STANDARD
           } as LoadingConfig
         } as CurrentImageConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

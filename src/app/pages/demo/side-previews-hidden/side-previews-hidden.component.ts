@@ -24,7 +24,7 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import { Image, LibConfig, ModalGalleryConfig, ModalGalleryRef, ModalGalleryService } from '@ks89/angular-modal-gallery';
+import { Image, ModalLibConfig, ModalGalleryConfig, ModalGalleryRef, ModalGalleryService } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
@@ -71,7 +71,7 @@ export class SidePreviewsHiddenComponent implements OnInit {
             show: false
           }
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -92,7 +92,7 @@ export class SidePreviewsHiddenComponent implements OnInit {
             show: false
           } as SidePreviewsConfig
         } as SlideConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

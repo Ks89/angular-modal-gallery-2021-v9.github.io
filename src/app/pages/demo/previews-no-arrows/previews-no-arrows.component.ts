@@ -26,7 +26,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {
   Image,
-  LibConfig,
+  ModalLibConfig,
   ModalGalleryConfig,
   ModalGalleryRef,
   ModalGalleryService,
@@ -75,7 +75,7 @@ export class PreviewsNoArrowsComponent implements OnInit {
           visible: true,
           arrows: false
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -94,7 +94,7 @@ export class PreviewsNoArrowsComponent implements OnInit {
           visible: true,
           arrows: false
         } as PreviewConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

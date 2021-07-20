@@ -27,7 +27,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   GridLayout,
   Image,
-  LibConfig,
+  PlainLibConfig,
   LineLayout,
   ModalGalleryRef, ModalGalleryService,
   PlainGalleryConfig,
@@ -52,25 +52,25 @@ export class PlainGalleryLayoutsComponent implements OnInit {
   codeHtml: string;
   codeTypescript: string;
 
-  libConfigPlainGalleryRow: LibConfig = {
+  libConfigPlainGalleryRow: PlainLibConfig = {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.ROW,
       layout: new LineLayout({ width: '80px', height: '80px' }, { length: 2, wrap: true }, 'flex-start')
     } as PlainGalleryConfig
   };
-  libConfigPlainGalleryRowSpaceAround: LibConfig = {
+  libConfigPlainGalleryRowSpaceAround: PlainLibConfig = {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.ROW,
       layout: new LineLayout({width: '50px', height: '50px'}, {length: 2, wrap: true}, 'space-around')
     } as PlainGalleryConfig
   };
-  libConfigPlainGalleryColumn: LibConfig = {
+  libConfigPlainGalleryColumn: PlainLibConfig = {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.COLUMN,
       layout: new LineLayout({ width: '50px', height: '50px' }, { length: 3, wrap: true }, 'flex-start')
     } as PlainGalleryConfig
   };
-  libConfigPlainGalleryGrid: LibConfig = {
+  libConfigPlainGalleryGrid: PlainLibConfig = {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.GRID,
       layout: new GridLayout({ width: '80px', height: '80px' }, { length: 3, wrap: true })
@@ -86,28 +86,28 @@ export class PlainGalleryLayoutsComponent implements OnInit {
     this.codeHtml = `<section>
     <h4>Plain gallery layout (limit 2) and custom size</h4>
     <br>
-    <ks-plain-gallery [id]="200" [images]="images" [showGallery]="true"
+    <ks-plain-gallery [id]="200" [images]="images"
                       [config]="libConfigPlainGalleryRow"
                       (showImage)="onShow(200, $event)"></ks-plain-gallery>
   </section>
   <section>
     <h4>Plain gallery row layout space around (limit 2)</h4>
     <br>
-    <ks-plain-gallery [id]="201" [images]="images" [showGallery]="true"
+    <ks-plain-gallery [id]="201" [images]="images"
                       [config]="libConfigPlainGalleryRowSpaceAround"
                       (showImage)="onShow(201, $event)"></ks-plain-gallery>
   </section>
   <section>
     <h4>Plain gallery column layout (limit 3)</h4>
     <br>
-    <ks-plain-gallery [id]="202" [images]="images" [showGallery]="true"
+    <ks-plain-gallery [id]="202" [images]="images"
                       [config]="libConfigPlainGalleryColumn"
                       (showImage)="onShow(202, $event)"></ks-plain-gallery>
   </section>
   <section>
     <h4>Plain gallery grid layout and custom size</h4>
     <br>
-    <ks-plain-gallery [id]="203" [images]="images" [showGallery]="true"
+    <ks-plain-gallery [id]="203" [images]="images"
                       [config]="libConfigPlainGalleryGrid"
                       (showImage)="onShow(203, $event)"></ks-plain-gallery>
   </section>`;
@@ -115,25 +115,25 @@ export class PlainGalleryLayoutsComponent implements OnInit {
     this.codeTypescript = `
   constructor(private modalGalleryService: ModalGalleryService) {}
 
-  libConfigPlainGalleryRow: LibConfig = {
+  libConfigPlainGalleryRow: PlainLibConfig = {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.ROW,
       layout: new LineLayout({ width: '80px', height: '80px' }, { length: 2, wrap: true }, 'flex-start')
     }
   };
-  libConfigPlainGalleryRowSpaceAround: LibConfig = {
+  libConfigPlainGalleryRowSpaceAround: PlainLibConfig = {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.ROW,
       layout: new LineLayout({width: '50px', height: '50px'}, {length: 2, wrap: true}, 'space-around')
     }
   };
-  libConfigPlainGalleryColumn: LibConfig = {
+  libConfigPlainGalleryColumn: PlainLibConfig = {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.COLUMN,
       layout: new LineLayout({ width: '50px', height: '50px' }, { length: 3, wrap: true }, 'flex-start')
     }
   };
-  libConfigPlainGalleryGrid: LibConfig = {
+  libConfigPlainGalleryGrid: PlainLibConfig = {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.GRID,
       layout: new GridLayout({ width: '80px', height: '80px' }, { length: 3, wrap: true })

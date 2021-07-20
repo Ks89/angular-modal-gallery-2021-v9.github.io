@@ -24,7 +24,7 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import { Image, KeyboardConfig, LibConfig, ModalGalleryConfig, ModalGalleryRef, ModalGalleryService } from '@ks89/angular-modal-gallery';
+import { Image, KeyboardConfig, ModalLibConfig, ModalGalleryConfig, ModalGalleryRef, ModalGalleryService } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
@@ -85,11 +85,11 @@ export class KeyboardConfigComponent implements OnInit {
       currentImage: this.images[imageIndex],
       libConfig: {
         keyboardConfig: {
-          esc: 81,
-          left: 40,
-          right: 38
+          esc: 'KeyQ',
+          left: 'ArrowDown',
+          right: 'ArrowUp'
         } as KeyboardConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

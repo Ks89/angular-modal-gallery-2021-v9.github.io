@@ -27,7 +27,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   DotsConfig,
   Image,
-  LibConfig,
+  ModalLibConfig,
   ModalGalleryConfig,
   ModalGalleryRef,
   ModalGalleryService,
@@ -78,7 +78,7 @@ export class NoDotsAndPreviewsComponent implements OnInit {
         dotsConfig: {
           visible: false
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -99,7 +99,7 @@ export class NoDotsAndPreviewsComponent implements OnInit {
         dotsConfig: {
           visible: false
         } as DotsConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

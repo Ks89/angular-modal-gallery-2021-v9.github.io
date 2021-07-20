@@ -24,7 +24,7 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import { Image, LibConfig, ModalGalleryConfig, ModalGalleryRef, ModalGalleryService } from '@ks89/angular-modal-gallery';
+import { Image, ModalGalleryConfig, ModalGalleryRef, ModalGalleryService, ModalLibConfig } from '@ks89/angular-modal-gallery';
 
 import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
@@ -57,7 +57,7 @@ export class ModalGalleryComponent implements OnInit {
 
     images: Image[]; // your images array
 
-    openModal(id: number, imageIndex: number, libConfig?: LibConfig): void {
+    openModal(id: number, imageIndex: number, libConfig?: ModalLibConfig): void {
     const imageToShow: Image = this.images[imageIndex];
     const dialogRef: ModalGalleryRef = this.modalGalleryService.open({
       id,
@@ -72,7 +72,7 @@ export class ModalGalleryComponent implements OnInit {
     this.metaData();
   }
 
-  openModal(id: number, imageIndex: number, libConfig?: LibConfig): void {
+  openModal(id: number, imageIndex: number, libConfig?: ModalLibConfig): void {
     const imageToShow: Image = this.images[imageIndex];
     const dialogRef: ModalGalleryRef | undefined = this.modalGalleryService.open({
       id,

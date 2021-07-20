@@ -24,11 +24,12 @@
 
 import { Component, OnInit } from '@angular/core';
 
+import { CarouselLibConfig, Image } from '@ks89/angular-modal-gallery';
+
 import { IMAGES_RECT_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
-import { Image } from '@ks89/angular-modal-gallery';
 
 @Component({
   selector: 'app-carousel-features-disables-page',
@@ -68,14 +69,31 @@ export class CarouselFeaturesDisablesComponent implements OnInit {
       </button>
     </p>
     <br>
-    <ks-carousel [id]="108" [images]="imagesRect"
-  [playConfig]="{autoPlay: autoPlay, interval: 3000, pauseOnHover: true}"
-  [carouselConfig]="{maxWidth: '100%', maxHeight: '400px', showArrows: showArrows,
-                     objectFit: 'cover', keyboardEnable: true, modalGalleryEnable: false}"
-  [dotsConfig]="{visible: showDots}"></ks-carousel>`;
+    <ks-carousel [id]="108" [images]="imagesRect" [config]="getLibConfig(autoPlay, showArrows, showDots)"></ks-carousel>`;
 
     this.codeTypescript =
       `  images: Image[]; // init this value with your images`;
+  }
+
+  getLibConfig(autoPlay: boolean, showArrows: boolean, showDots: boolean): CarouselLibConfig {
+    return {
+      carouselDotsConfig: {
+        visible: showDots
+      },
+      carouselPlayConfig: {
+        autoPlay: autoPlay,
+        interval: 3000,
+        pauseOnHover: true
+      },
+      carouselConfig: {
+        maxWidth: '100%',
+        maxHeight: '400px',
+        showArrows: showArrows,
+        objectFit: 'cover',
+        keyboardEnable: true,
+        modalGalleryEnable: false
+      }
+    } as CarouselLibConfig;
   }
 
   onChangeAutoPlay() {

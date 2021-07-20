@@ -24,7 +24,7 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import { Image, LibConfig, ModalGalleryConfig, ModalGalleryRef, ModalGalleryService, PlayConfig } from '@ks89/angular-modal-gallery';
+import { Image, ModalLibConfig, ModalGalleryConfig, ModalGalleryRef, ModalGalleryService, PlayConfig } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
@@ -71,7 +71,7 @@ export class ModalAutoplayCustomComponent implements OnInit {
             pauseOnHover: false
           }
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -93,7 +93,7 @@ export class ModalAutoplayCustomComponent implements OnInit {
             pauseOnHover: false
           } as PlayConfig
         } as SlideConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

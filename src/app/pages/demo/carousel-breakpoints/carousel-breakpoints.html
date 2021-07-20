@@ -10,8 +10,7 @@
   <h3>Live Demos</h3>
   <br>
   <p>1. Full width</p>
-  <ks-carousel [id]="115" [images]="images"
-               [previewConfig]="{visible: true, breakpoints: {xSmall: 50, small: 60, medium: 80, large: 150, xLarge: 180}}"></ks-carousel>
+  <ks-carousel [id]="115" [images]="images" [config]="libConfig1"></ks-carousel>
   <br>
 
   <section>
@@ -28,9 +27,7 @@
 
   <br>
   <p>2. Fixed width 500px</p>
-  <ks-carousel [id]="116" [images]="images"
-               [carouselConfig]="{maxWidth: '500px', maxHeight: '400px', showArrows: true, objectFit: 'cover', keyboardEnable: true, modalGalleryEnable: false, legacyIE11Mode: false}"
-               [previewConfig]="{visible: true, breakpoints: {xSmall: 50, small: 60, medium: 70, large: 80, xLarge: 100}}"></ks-carousel>
+  <ks-carousel [id]="116" [images]="images" [config]="libConfig2"></ks-carousel>
   <br>
 
   <section>

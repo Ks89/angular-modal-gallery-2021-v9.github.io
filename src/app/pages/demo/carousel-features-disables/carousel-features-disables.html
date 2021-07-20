@@ -12,10 +12,7 @@
   <p>Show Arrows: <button class="btn btn-primary" (click)="onChangeShowArrows()">{{showArrows ? 'Hide Arrows' : 'Show Arrows'}}</button></p>
   <p>Show Dots: <button class="btn btn-primary" (click)="onChangeShowDots()">{{showDots ? 'Hide Dots' : 'Show Dots'}}</button></p>
   <br>
-  <ks-carousel [id]="108" [images]="images"
-    [playConfig]="{autoPlay: autoPlay, interval: 3000, pauseOnHover: true}"
-    [carouselConfig]="{maxWidth: '100%', maxHeight: '400px', showArrows: showArrows, objectFit: 'cover', keyboardEnable: true, modalGalleryEnable: false, legacyIE11Mode: false}"
-    [dotsConfig]="{visible: showDots}"></ks-carousel>
+  <ks-carousel [id]="108" [images]="images" [config]="getLibConfig(autoPlay, showArrows, showDots)"></ks-carousel>
   <br><br>
 
   <section>

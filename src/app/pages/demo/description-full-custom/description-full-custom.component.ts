@@ -28,7 +28,7 @@ import {
   CurrentImageConfig,
   Description,
   DescriptionStrategy,
-  Image, LibConfig, ModalGalleryConfig,
+  Image, ModalLibConfig, ModalGalleryConfig,
   ModalGalleryRef,
   ModalGalleryService
 } from '@ks89/angular-modal-gallery';
@@ -79,7 +79,7 @@ export class DescriptionFullCustomComponent implements OnInit {
             beforeTextDescription: ' => '
           }
         }
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
   }
@@ -113,7 +113,7 @@ export class DescriptionFullCustomComponent implements OnInit {
             }
           } as Description
         } as CurrentImageConfig
-      } as LibConfig
+      } as ModalLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 
