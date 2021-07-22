@@ -53,11 +53,11 @@ export class ModalGalleryComponent implements OnInit {
     this.codeHtml = `<button (click)="openModal(500, 0)">Click to open modal gallery id=1 at index=0</button>`;
 
     this.codeTypescript =
-      `    constructor(private modalGalleryService: ModalGalleryService) {}
+      `  constructor(private modalGalleryService: ModalGalleryService) {}
 
-    images: Image[]; // your images array
+  images: Image[]; // your images array
 
-    openModal(id: number, imageIndex: number, libConfig?: ModalLibConfig): void {
+  openModal(id: number, imageIndex: number, libConfig?: ModalLibConfig): void {
     const imageToShow: Image = this.images[imageIndex];
     const dialogRef: ModalGalleryRef = this.modalGalleryService.open({
       id,

@@ -25,14 +25,8 @@
         <p>Use the latest version of Angular (with the recommended rxjs version). It must be Angular 13 or higher.</p>
 
         <br>
-        <h4>Step 3 - be sure to install the mandatory dependency `@angular/cdk`</h4>
 
-        <p>@angular/cdk is mandatory to support responsiveness of carousel component and to show modal gallery.</p>
-
-        <p>So, in your terminal run: <code>npm install --save @angular/cdk</code></p>
-
-        <br>
-        <h4>Step 4 - update your code</h4>
+        <h4>Step 3 - update your code</h4>
 
         TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
         <br>
@@ -47,7 +41,7 @@
         <pre>
   &lt;ks-plain-gallery [id]="1" [images]="images"
     [config]="libConfigPlainGallery"
-    (showImage)="onShow(1, $event)"&gt;&lt;/ks-plain-gallery&gt;
+    (clickImage)="onShow(1, $event)"&gt;&lt;/ks-plain-gallery&gt;
         </pre>
         <p>Then add the LibConfig object and <code>onShow</code> method in Typescript component:</p>
         <pre>
@@ -71,9 +65,6 @@
         </pre>
 
         <br>
-        <h5>Modal Gallery</h5>
-
-        <p>In case of Modal Galley, you have to remove HTML selector from all you HTML files, because now it's an Angular service and not a component.</p>
       </section>
 
     </div>

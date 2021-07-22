@@ -50,8 +50,7 @@
               <i>Type: </i><code>number</code>
             </div>
             <div>
-              A mandatory unique id >= 0 of the current modal gallery, used by <a href="#GalleryService"><code>GalleryService</code></a>.
-<!--              A mandatory unique id >= 0 of the current modal gallery, used by <a pageScroll href="#GalleryService"><code>GalleryService</code></a>.-->
+              A mandatory unique id >= 0 of the current modal gallery, used by GalleryService.
             </div>
           </td>
         </tr>
@@ -94,7 +93,7 @@
           </td>
           <td>
             <div>
-              <i>Type: </i><code><a [routerLink]="['/features/common']">LibConfig</a></code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+              <i>Type: </i><code><a [routerLink]="['/features/common']">ModalLibConfig</a></code><span class="badge rounded-pill bg-secondary float-end">optional</span>
             </div>
             <div>
               <p>Interface to configure modal gallery.</p>
@@ -161,7 +160,7 @@
           <td>
             <p>An <code><a pageScroll href="#ImageModalEvent">ImageModalEvent</a></code> right <b>after</b> the initialization of <code>modalImages</code>.</p>
             <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum and a result (boolean or number)</p>
-            <p>This event is useful to know when angular-modal-gallery is ready.</p>
+            <p>This event is useful to know when @ks89/angular-modal-gallery is ready.</p>
             <ul>
               <li>action: <code><a [routerLink]="['/features/common']">Action.LOAD</a></code></li>
               <li>result: <code>true</code></li>
@@ -174,7 +173,7 @@
             <p>A <code><a [routerLink]="['/features/upper-buttons']">ButtonEvent</a></code> right <b>before</b> the action related to an upper button.</p>
             <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum, the current <code><a [routerLink]="['/features/common']">Image</a></code> and the <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code> that triggered this event</p>
             <p>This event is a 'before hook', because you can execute your code before every action triggered by buttons. Also, since you have the full
-              <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code> in the payload, you can run different code based on button's type</p>
+              <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code> in the payload, you can execute different code based on button's type</p>
             <ul>
               <li>action: <code><a [routerLink]="['/features/common']">Action.LOAD</a></code></li>
               <li>button: <code><code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code></code></li>
@@ -188,7 +187,7 @@
             <p>A <code><a [routerLink]="['/features/upper-buttons']">ButtonEvent</a></code> right <b>after</b> the action related to an upper button.</p>
             <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum, the current <code><a [routerLink]="['/features/common']">Image</a></code> and the <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code> that triggered this event</p>
             <p>This event is an 'after hook', because you can execute your code after every action triggered by buttons. Also, since you have the full
-              <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code> in the payload, you can run different code based on button's type</p>
+              <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code> in the payload, you can execute different code based on button's type</p>
             <ul>
               <li>action: <code><a [routerLink]="['/features/common']">Action.LOAD</a></code></li>
               <li>button: <code><code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code></code></li>
@@ -246,7 +245,7 @@
             <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
           </div>
           <div>
-            <p>Optional external URL path. You must use a valid URL, because <code>angular-modal-gallery</code>
+            <p>Optional external URL path. You must use a valid URL, because @ks89/angular-modal-gallery
               will simply navigate to this URL. To ignore this feature, don't add this property.</p>
           </div>
         </td>
@@ -497,7 +496,7 @@
           <i>Type: </i><code>LoadingType</code>
         </div>
         <div>
-          <p>Enum to choose a loading spinner (already bundled in angular-modal-gallery in pure css). <code>LoadingType.STANDARD</code> by default</p>
+          <p>Enum to choose a loading spinner (already bundled in @ks89/angular-modal-gallery in pure css). <code>LoadingType.STANDARD</code> by default</p>
         </div>
       </td>
     </tr>
@@ -551,48 +550,187 @@
 
   <br>
 
-  <h2 id="GalleryService" class="link clickable">
-    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">GalleryService</a>
+  <h2 id="ModalGalleryConfig" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">ModalGalleryConfig</a>
   </h2>
-  <p>Service to interact with modal gallery without clicking on plain-gallery. For instance, you can open modal gallery from your Component's code instead of clicking on a thumb in plain gallery.</p>
+  <p>Interface used as input parameter of the open() method to open modal-gallery.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+      <tr>
+        <td><small><code>id</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>number</code>
+          </div>
+          <div>
+            <p>The mandatory unique gallery id. It must be >= 0.</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><small><code>images</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>Image[]</code>
+          </div>
+          <div>
+            <i>Type: </i><code><a [routerLink]="['/features/common']">Image[]</a></code>
+          </div>
+          <div>
+            The mandatory array of <code><a [routerLink]="['/features/common']">Image</a></code> objects, that represent the
+            modal images.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><small><code>currentImage</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code><a [routerLink]="['/features/common']">Image</a></code>
+          </div>
+          <div>
+            <p>The mandatory Image instance to show. It must be an element of the <code>images</code> array.</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><small><code>libConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>ModalLibConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional configuration to customize modal-gallery. For more info check <code><a [routerLink]="['/features/common']">ModalLibConfig</a></code>.</p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <h2 id="ModalGalleryService" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">ModalGalleryService</a>
+  </h2>
+  <p>Service to interact with modal gallery.</p>
   <br>
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><small><code>openGallery ( galleryId, index )</code></small></td>
+      <td><small><code>open( config )</code></small></td>
       <td>
         <div>
-          <i>Input types: </i><code>galleryId: number | undefined</code>&nbsp;&nbsp;and&nbsp;&nbsp;<code>index: number</code>
+          <i>Input types: </i><code>config: ModalGalleryConfig</code>
         </div>
         <div>
-          <p>Method to open an image (index) of modal gallery (id). You have to provide both an index >= 0 and a galleryId >= 0.
+          <i>Return types: </i><code>ModalGalleryRef | undefined</code> to listen for events.
+        </div>
+        <div>
+          <p>Method to open modal gallery with a specific id, an image (index) of modal gallery (id). You have to provide both an index >= 0 and a galleryId >= 0.
             Also, remember that ids must be unique across your web page,
             so every instance of modal gallery must have a different id.</p>
         </div>
       </td>
       <tr>
-        <td><small><code>closeGallery ( galleryId )</code></small></td>
+        <td><small><code>close( id, clickOutside )</code></small></td>
         <td>
           <div>
-            <i>Input types: </i><code>galleryId: number | undefined</code>
+            <i>Input types: </i><code>id: number | undefined</code> and <code>clickOutside: boolean</code>
           </div>
           <div>
-            <p>Method to close the modal gallery with id equals to the input parameter galleryId.
-              You have to provide a galleryId >= 0. Also, remember that ids must be unique across your web page,
-              so every instance of modal gallery must have a different id.</p>
+            <p>Method to close the modal gallery with id equals to the modal gallery id to close.
+              You should pass false as clickOutside, except when you want to close the gallery only
+              if 'enableCloseOutside' of <code><a [routerLink]="['/features/common']">ModalLibConfig</a></code> is defined and equals to true.</p>
           </div>
         </td>
       </tr>
       <tr>
-        <td><small><code>update ( galleryId, index, newImage )</code></small></td>
+        <td><small><code>updateModalImages ( images )</code></small></td>
         <td>
           <div>
-            <i>Input types: </i><code>galleryId: number | undefined</code> &nbsp;, &nbsp;&nbsp;<code>index: number</code> and&nbsp;&nbsp;<code>newImage: Image</code>
+            <i>Input types: </i><code>images: Images[]</code>
           </div>
           <div>
-            <p>Method to update the images array at position <code>index</code> with <code>newImage</code> passed as parameter.
-              You have to provide a galleryId >= 0. Also, remember that ids must be unique across your web page,
-              so every instance of modal gallery must have a different id.</p>
+            <p>Method to update the current images array with another one passed as input.</p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <h2 id="ModalGalleryRef" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">ModalGalleryRef</a>
+  </h2>
+  <p>Object returned by the open() method to listen for events emitted by the modal-gallery.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+      <tr>
+        <td><small><code>close$</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>Observable&lt;ImageModalEvent&gt;</code>
+          </div>
+          <div>
+            <p>Subscribe to this Observable to emit close output.</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><small><code>show$</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>Observable&lt;ImageModalEvent&gt;</code>
+          </div>
+          <div>
+            <p>Subscribe to this Observable to emit show output.</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><small><code>firstImage$</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>Observable&lt;ImageModalEvent&gt;</code>
+          </div>
+          <div>
+            <p>Subscribe to this Observable to emit firstImage output.</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><small><code>lastImage$</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>Observable&lt;ImageModalEvent&gt;</code>
+          </div>
+          <div>
+            <p>Subscribe to this Observable to emit lastImage output.</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><small><code>buttonBeforeHook$</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>Observable&lt;ButtonEvent&gt;</code>
+          </div>
+          <div>
+            <p>Subscribe to this Observable to emit buttonBeforeHook output.</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><small><code>buttonAfterHook$</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>Observable&lt;ButtonEvent&gt;</code>
+          </div>
+          <div>
+            <p>Subscribe to this Observable to emit buttonAfterHook output.</p>
           </div>
         </td>
       </tr>
@@ -624,10 +762,10 @@
   <p>Enum that represents keyboard's keycodes. It can be one of these enum values:</p>
   <br>
   <ul>
-    <li><code>ESC</code>: 27</li>
-    <li><code>LEFT_ARROW</code>: 37</li>
-    <li><code>RIGHT_ARROW</code>: 39</li>
-    <li><code>UP_ARROW</code>: 38</li>
-    <li><code>DOWN_ARROW</code>: 40</li>
+    <li><code>ESC</code>: 'Escape'</li>
+    <li><code>LEFT_ARROW</code>: 'ArrowLeft'</li>
+    <li><code>RIGHT_ARROW</code>: 'ArrowRight'</li>
+    <li><code>UP_ARROW</code>: 'ArrowUp'</li>
+    <li><code>DOWN_ARROW</code>: 'ArrowDown'</li>
   </ul>
 </div>

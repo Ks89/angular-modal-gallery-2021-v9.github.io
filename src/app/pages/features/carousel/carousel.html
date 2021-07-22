@@ -1,6 +1,5 @@
 <div class="container">
 
-  <!-- TODO Add link to github sources -->
   <h1 id="Carousel" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Carousel</a>
   </h1>
@@ -50,7 +49,7 @@
             <div>
               A mandatory unique id >= 0 of the current carousel.
               Despite CarouselComponent doesn't use this value, it must be unique because a carousel can open a modal image
-              using <code><a [routerLink]="['/features/modal-gallery']">GalleryService</a></code>.
+              using <code><a [routerLink]="['/features/modal-gallery']">ModalGalleryService</a></code>.
             </div>
           </td>
         </tr>
@@ -73,130 +72,15 @@
         <tr>
           <td class="big-tds">
             <div>
-              <small><code>carouselConfig</code></small>
+              <small><code>config</code></small>
             </div>
           </td>
           <td>
             <div>
-              <i>Type: </i><code>CarouselConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+              <i>Type: </i><code>CarouselLibConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
             </div>
             <div>
-              <p>Interface to configure the carousel, like to change sizes, hide some features and so on.</p>
-              <p>For more information, please see the CarouselConfig's section</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="big-tds">
-            <div>
-              <small><code>playConfig</code></small>
-            </div>
-          </td>
-          <td>
-            <div>
-              <i>Type: </i><code><a [routerLink]="['/features/common']">PlayConfig</a></code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-            </div>
-            <div>
-              <p>Interface to change the behaviour of auto-navigation, like autoPlay and interval in milliseconds.</p>
-              <p>For more information, please see the <a [routerLink]="['/features/common']">PlayConfig</a>'s section</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="big-tds">
-            <div>
-              <small><code>carouselImageConfig</code></small>
-            </div>
-          </td>
-          <td>
-            <div>
-              <i>Type: </i><code>CarouselImageConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-            </div>
-            <div>
-              <p>Interface to change current image of the carousel, like description or to invert the swipe direction.</p>
-              <p>For more information, please see the CarouselImageConfig's section</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="big-tds">
-            <div>
-              <small><code>dotsConfig</code></small>
-            </div>
-          </td>
-          <td>
-            <div>
-              <i>Type: </i><code><a [routerLink]="['/features/common']">DotsConfig</a></code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-            </div>
-            <div>
-              <p>Interface to configure dots.</p>
-              <p>For more information, please see the <code><a [routerLink]="['/features/common']">DotsConfig</a></code>'s section</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="big-tds">
-            <div>
-              <small><code>previewConfig</code></small>
-            </div>
-          </td>
-          <td>
-            <div>
-              <i>Type: </i><code><a [routerLink]="['/features/previews']">CarouselPreviewConfig</a></code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-            </div>
-            <div>
-              <p>Interface to configure previews, for instance to choose either the number, visibility, arrows, sizes.
-                If you want to know how to use this object, please check <a [routerLink]="['/features/previews']">PreviewsComponent</a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="big-tds">
-            <div>
-              <small><code>infinite</code></small>
-            </div>
-          </td>
-          <td>
-            <div>
-              <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-            </div>
-            <div>
-              <p>Input to enables infinite sliding. true by default</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="big-tds">
-            <div>
-              <small><code>accessibilityConfig</code></small>
-            </div>
-          </td>
-          <td>
-            <div>
-              <i>Type: </i><code><a [routerLink]="['/features/accessibility']">AccessibilityConfig</a></code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-            </div>
-            <div>
-              <p>Interface to customize accessibility features, like alt, titles, aria-labels and so on. CarouselComponent applies a default value with english texts.
-                This default config object is exported as <small><code><a [routerLink]="['/features/default-values']">KS_DEFAULT_ACCESSIBILITY_CONFIG</a></code></small>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="big-tds">
-            <div>
-              <small><code>disableSsrWorkaround</code></small>
-            </div>
-          </td>
-          <td>
-            <div>
-              <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-            </div>
-            <div>
-              <div>
-                <p>Input to support SystemJS bypassing some workarounds to enable SSR support. false by default</p>
-                <p class="warning">Attention: use this only if you are using SystemJS instead of angular-cli or webpack.
-                  In future releases I'll drop SystemJS support, so please consider to switch to angular-cli as soon as possible.</p>
-              </div>
+              <p>Interface to configure carousel gallery.</p>
             </div>
           </td>
         </tr>
@@ -208,6 +92,12 @@
     <h2>Outputs</h2>
     <table class="table table-hover table-sm">
       <tbody>
+        <tr>
+          <td><small><code>clickImage</code></small></td>
+          <td>
+            <p>A <code>number</code> that represents the index of the clicked image.</p>
+          </td>
+        </tr>
         <tr>
           <td><small><code>show</code></small></td>
           <td>
@@ -329,6 +219,51 @@
           </div>
         </td>
       </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <h2 id="PlayConfig" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">PlayConfig</a>
+  </h2>
+  <p>Interface to change the behaviour of auto-navigation, like autoPlay and interval in milliseconds.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr>
+      <td><small><code>autoPlay</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>boolean</code>
+        </div>
+        <div>
+          <p>If false autoPlay is disabled. true by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>interval</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>number</code>
+        </div>
+        <div>
+          <p>Integer >= 0 that represents the amount of time in milliseconds between every image.
+            It's used only when autoPlay is enabled. 5000 by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>pauseOnHover</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>boolean</code>
+        </div>
+        <div>
+          <p>If false, carousel won't stop moving the mouse pointer over it. true by default.</p>
+        </div>
+      </td>
+    </tr>
     </tbody>
   </table>
 

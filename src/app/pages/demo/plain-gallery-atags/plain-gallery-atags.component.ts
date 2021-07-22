@@ -68,7 +68,7 @@ export class PlainGalleryAtagsComponent implements OnInit {
     this.codeHtml =
       `<ks-plain-gallery [id]="204" [images]="images"
                     [config]="libConfigPlainGalleryRowATags"
-                    (showImage)="onShow(204, $event)"></ks-plain-gallery>`;
+                    (clickImage)="onShow(204, $event)"></ks-plain-gallery>`;
 
     this.codeTypescript = `
   constructor(private modalGalleryService: ModalGalleryService) {}
