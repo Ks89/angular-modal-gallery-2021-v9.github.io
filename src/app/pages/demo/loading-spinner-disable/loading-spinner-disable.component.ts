@@ -63,7 +63,7 @@ export class LoadingSpinnerDisableComponent implements OnInit {
       `<button (click)="openModal(321, 0)">Open modal gallery id=1 at index=0</button>`;
 
     this.codeTypescript = `
-  images: Image[]; // init this value with your images
+  images: Image[]; // init this array with your images
 
   constructor(private modalGalleryService: ModalGalleryService) {}
 

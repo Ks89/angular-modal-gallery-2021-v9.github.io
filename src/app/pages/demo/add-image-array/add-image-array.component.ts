@@ -57,7 +57,7 @@ export class AddImageArrayComponent implements OnInit {
   `;
 
     this.codeTypescript =
-      `  images: Image[]; // init this value with your images
+      `  images: Image[]; // init this array with your images
 
   constructor(private modalGalleryService: ModalGalleryService) {}
 

@@ -72,7 +72,6 @@ export class PlainGalleryCustomWithDescComponent implements OnInit {
   constructor(private modalGalleryService: ModalGalleryService) {}
 
   openImageModalRowDescription(id: number, image: Image): void {
-    console.log('Opening modal gallery from custom plain gallery row and description, with image: ', image);
     const index: number = this.getCurrentIndexCustomLayout(image, this.images);
     const dialogRef: ModalGalleryRef = this.modalGalleryService.open({
       id,

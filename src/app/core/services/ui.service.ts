@@ -49,7 +49,7 @@ export class UiService {
     const description = config.description || this.appDescription;
     const image = config.image || this.appImage;
     const title = config.title
-      ? `${this.appTitle} ${config.title}`
+      ? `${this.appTitle} - ${config.title}`
       : this.appTitle;
     const url = config.url || 'https://www.stefanocappa.it/amg/v7';
     const twitterProfile = '@ksks89';

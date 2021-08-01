@@ -66,7 +66,7 @@ export class DownloadCustomFilenameComponent implements OnInit {
       `<button (click)="openModal(316, 0)">Open modal gallery id=1 at index=0</button>`;
 
     this.codeTypescript = `
-  // init this value with your images with 'modal.downloadFileName': 'custom file name'
+  // init this array with your images with 'modal.downloadFileName': 'custom file name'
   images: Image[];
 
   constructor(private modalGalleryService: ModalGalleryService) {}

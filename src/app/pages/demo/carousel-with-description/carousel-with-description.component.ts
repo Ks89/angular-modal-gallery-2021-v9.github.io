@@ -24,7 +24,7 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import { CarouselLibConfig, Image } from '@ks89/angular-modal-gallery';
+import { CarouselLibConfig, DescriptionStrategy, Image } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_RECT_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
@@ -47,7 +47,7 @@ export class CarouselWithDescriptionComponent implements OnInit {
   libConfig: CarouselLibConfig = {
     carouselImageConfig: {
       description: {
-        strategy: 2
+        strategy: DescriptionStrategy.ALWAYS_VISIBLE
       }
     }
   };
@@ -60,12 +60,12 @@ export class CarouselWithDescriptionComponent implements OnInit {
       `  <ks-carousel [id]="113" [images]="images" [config]="libConfig"></ks-carousel>`;
 
     this.codeTypescript =
-      `  images: Image[]; // init this value with your images
+      `  images: Image[]; // init this array with your images
 
   libConfig: CarouselLibConfig = {
     carouselImageConfig: {
       description: {
-        strategy: 2
+        strategy: DescriptionStrategy.ALWAYS_VISIBLE
       }
     }
   };`;

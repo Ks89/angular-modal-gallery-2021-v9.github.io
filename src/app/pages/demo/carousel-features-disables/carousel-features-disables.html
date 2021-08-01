@@ -55,25 +55,47 @@
           </td>
         </tr>
         <tr>
+          <td><code>config</code></td>
+          <td>
+            <div><i>Value: </i><code>CarouselLibConfig</code></div>
+            <div><b class="text-success"><code>CarouselLibConfig</code> object to config the library. See below.</b></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h4>CarouselLibConfig</h4>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+      <tr>
+        <th>Input</th>
+        <th>Value</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
           <td><code>carouselConfig</code></td>
           <td>
             <div><i>Value: </i><code>&#123; maxWidth: '100%', maxHeight: '400px', showArrows: showArrows, objectFit: 'cover', keyboardEnable: true, modalGalleryEnable: false &#125;</code></div>
-            <div>Full width carousel with height 400px, image cover, togglable arrows via an external variable, keyboard navigation,
+            <div>Full width carousel with height 400px, image cover, toggleable arrows via an external variable, keyboard navigation,
               but without modal gallery</div>
           </td>
         </tr>
         <tr>
-          <td><code>playConfig</code></td>
+          <td><code>carouselPlayConfig</code></td>
           <td>
             <div><i>Value: </i><code>&#123; autoPlay: autoPlay, interval: 3000, pauseOnHover: true &#125;</code></div>
-            <div>Togglable autoPlay via an external variable, pauseOnHover is enabled and there are 5000ms of delay</div>
+            <div>toggleable autoPlay via an external variable, pauseOnHover is enabled and there are 3000mx of delay</div>
           </td>
         </tr>
         <tr>
-          <td><code>dotsConfig</code></td>
+          <td><code>carouselDotsConfig</code></td>
           <td>
             <div><i>Value: </i><code>visible: showDots</code></div>
-            <div>Togglable dots via an external variable</div>
+            <div>toggleable dots via an external variable</div>
           </td>
         </tr>
       </tbody>

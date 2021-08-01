@@ -52,7 +52,7 @@ export class CarouselMinimalComponent implements OnInit {
       `  <ks-carousel [id]="100" [images]="images"></ks-carousel>`;
 
     this.codeTypescript =
-      `  images: Image[]; // init this value with your images`;
+      `  images: Image[]; // init this array with your images`;
   }
 
   ngOnInit(): void {

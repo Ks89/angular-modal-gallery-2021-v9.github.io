@@ -83,7 +83,6 @@ export class PlainGalleryImagePointerComponent implements OnInit {
 constructor(private modalGalleryService: ModalGalleryService) {}
 
 openImageModalRow(id: number, image: Image): void {
-  console.log('Opening modal gallery from custom plain gallery row, with image: ', image);
   const index: number = this.getCurrentIndexCustomLayout(image, this.images);
   const dialogRef: ModalGalleryRef = this.modalGalleryService.open({
     id,

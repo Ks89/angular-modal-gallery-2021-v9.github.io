@@ -53,26 +53,49 @@ export class CarouselFeaturesDisablesComponent implements OnInit {
     this.titleService.titleEvent.emit('Examples - Carousel disable features');
 
     this.codeHtml =
-      `  <p>Autoplay:
-      <button class="btn btn-primary" (click)="onChangeAutoPlay()">
-      {{autoPlay ? 'disable autoplay' : 'enable autoplay'}}
-      </button>
-    </p>
-    <p>Show Arrows:
-      <button class="btn btn-primary" (click)="onChangeShowArrows()">
-      {{showArrows ? 'Hide Arrows' : 'Show Arrows'}}
-      </button>
-    </p>
-    <p>Show Dots:
-      <button class="btn btn-primary" (click)="onChangeShowDots()">
-      {{showDots ? 'Hide Dots' : 'Show Dots'}}
-      </button>
-    </p>
-    <br>
-    <ks-carousel [id]="108" [images]="imagesRect" [config]="getLibConfig(autoPlay, showArrows, showDots)"></ks-carousel>`;
+      `  <p>Autoplay: <button class="btn btn-primary" (click)="onChangeAutoPlay()">{{autoPlay ? 'disable autoplay' : 'enable autoplay'}}</button></p>
+  <p>Show Arrows: <button class="btn btn-primary" (click)="onChangeShowArrows()">{{showArrows ? 'Hide Arrows' : 'Show Arrows'}}</button></p>
+  <p>Show Dots: <button class="btn btn-primary" (click)="onChangeShowDots()">{{showDots ? 'Hide Dots' : 'Show Dots'}}</button></p>
+  <br>
+  <ks-carousel [id]="108" [images]="images" [config]="getLibConfig(autoPlay, showArrows, showDots)"></ks-carousel>`;
 
-    this.codeTypescript =
-      `  images: Image[]; // init this value with your images`;
+    this.codeTypescript = `
+  images: Image[]; // init this array with your images
+
+  constructor(private modalGalleryService: ModalGalleryService) {}
+
+  getLibConfig(autoPlay: boolean, showArrows: boolean, showDots: boolean): CarouselLibConfig {
+    return {
+      carouselDotsConfig: {
+        visible: showDots
+      },
+      carouselPlayConfig: {
+        autoPlay: autoPlay,
+        interval: 3000,
+        pauseOnHover: true
+      },
+      carouselConfig: {
+        maxWidth: '100%',
+        maxHeight: '400px',
+        showArrows: showArrows,
+        objectFit: 'cover',
+        keyboardEnable: true,
+        modalGalleryEnable: false
+      }
+    } as CarouselLibConfig;
+  }
+
+  onChangeAutoPlay() {
+    this.autoPlay = !this.autoPlay;
+  }
+
+  onChangeShowArrows() {
+    this.showArrows = !this.showArrows;
+  }
+
+  onChangeShowDots() {
+    this.showDots = !this.showDots;
+  }`;
   }
 
   getLibConfig(autoPlay: boolean, showArrows: boolean, showDots: boolean): CarouselLibConfig {

@@ -55,7 +55,7 @@ export class CarouselOutputsComponent implements OnInit {
   (lastImage)="onLastImage($event)"></ks-carousel>`;
 
     this.codeTypescript =
-      `  images: Image[]; // init this value with your images
+      `  images: Image[]; // init this array with your images
   // output events
   onChangeImage(event: ImageEvent) {
     console.log('showImage', event);

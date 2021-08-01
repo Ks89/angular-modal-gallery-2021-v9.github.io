@@ -60,7 +60,7 @@ export class CarouselCustomAutoplayComponent implements OnInit {
       `  <ks-carousel [id]="106" [images]="images" [config]="libConfig"></ks-carousel>`;
 
     this.codeTypescript =
-      `  images: Image[]; // init this value with your images
+      `  images: Image[]; // init this array with your images
 
   libConfig: CarouselLibConfig = {
     carouselPlayConfig: {

@@ -70,7 +70,7 @@ export class CarouselFixedComponent implements OnInit {
       `  <ks-carousel [id]="109" [images]="images" [config]="libConfigCarouselFixed"></ks-carousel>`;
 
     this.codeTypescript =
-      `  images: Image[]; // init this value with your images
+      `  images: Image[]; // init this array with your images
 
   libConfigCarouselFixed: CarouselLibConfig = {
     carouselPreviewsConfig: {

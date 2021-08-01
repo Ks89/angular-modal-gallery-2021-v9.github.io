@@ -55,7 +55,7 @@ export class CarouselContentProjectionComponent implements OnInit {
   </ks-carousel>`;
 
     this.codeTypescript =
-      `  images: Image[]; // init this value with your images`;
+      `  images: Image[]; // init this array with your images`;
   }
 
   ngOnInit(): void {

@@ -88,13 +88,13 @@ export class CarouselBreakpointsComponent implements OnInit {
       `  <ks-carousel [id]="115" [images]="images" [config]="libConfig1"></ks-carousel>`;
 
     this.codeTypescript =
-      `  images: Image[]; // init this value with your images`;
+      `  images: Image[]; // init this array with your images`;
 
     this.codeHtml2 =
       `  <ks-carousel [id]="116" [images]="images" [config]="libConfig2"></ks-carousel>`;
 
     this.codeTypescript2 =
-      `  images: Image[]; // init this value with your images
+      `  images: Image[]; // init this array with your images
 
   libConfig1: CarouselLibConfig = {
     carouselPreviewsConfig: {
