@@ -46,6 +46,7 @@ import { CarouselBreakpointsComponent } from './carousel-breakpoints/carousel-br
 import { SameImagesComponent } from './same-images/same-images.component';
 import { ModalAutoplayMinimalComponent } from './modal-autoplay-minimal/modal-autoplay-minimal.component';
 import { ModalAutoplayCustomComponent } from './modal-autoplay-custom/modal-autoplay-custom.component';
+import { PreviewsCustomTemplateComponent } from './previews-custom-template/previews-custom-template.component';
 
 export const routes: Routes = [
   {
@@ -79,6 +80,7 @@ export const routes: Routes = [
       {path: 'previews-length', component: PreviewsLengthComponent},
       {path: 'previews-no-arrows', component: PreviewsNoArrowsComponent},
       {path: 'previews-not-clickable', component: PreviewsNotClickableComponent},
+      {path: 'previews-custom-template', component: PreviewsCustomTemplateComponent},
 
       {path: 'buttons-strategies', component: ButtonsStrategiesComponent},
       {path: 'buttons-exturl-newtab', component: ButtonsExturlNewtabComponent},
