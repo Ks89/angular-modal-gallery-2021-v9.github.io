@@ -39,11 +39,11 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-previews-custom-template',
-  templateUrl: './previews-custom-template.component.html',
-  styleUrls: ['./previews-custom-template.component.scss']
+  selector: 'app-previews-template',
+  templateUrl: './previews-template.component.html',
+  styleUrls: ['./previews-template.component.scss']
 })
-export class PreviewsCustomTemplateComponent implements OnInit {
+export class PreviewsTemplateComponent implements OnInit {
   @ViewChild('previewsTemplate') previewsTemplate?: TemplateRef<HTMLElement>;
 
   images: Image[] = [...IMAGES_ARRAY];
@@ -52,10 +52,8 @@ export class PreviewsCustomTemplateComponent implements OnInit {
   configTs: any = codemirrorTs;
 
   codeHtml: string;
-  codeHtml2: string;
   codeCss: string;
   codeTypescript: string;
-  codeTypescript2: string;
 
   constructor(private uiService: UiService,
               private titleService: TitleService,
@@ -103,36 +101,7 @@ export class PreviewsCustomTemplateComponent implements OnInit {
       previewsTemplate: this.previewsTemplate,
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
-  this.codeTypescript2 = `interface CustomModalImage extends ModalImage {
-  pictureDate: Date;
-}
-
-...
-
-// when creating the Image array
-this.images.push(new Image( 
-  imageId,
-  {
-    img: imageUrl,
-    description: 'yellow duck',
-    title: 'duck',
-    pictureDate: imageDate,
-  } as CustomModalImage,
-  // Thumbnail (aka 'plain' image)
-  {
-    img: thumbUrl,
-  } as PlainImage,    
-);
-  `;
-  this.codeHtml2 = `<ng-template #previewsTemplate let-preview="preview" let-defaultTemplate="defaultTemplate">
-  <div class="preview-block">
-    <div class="preview-description">{{ preview.modal.pictureDate | date }}</div>
-    <div class="preview-default">
-      <ng-container *ngTemplateOutlet="defaultTemplate"></ng-container>
-    </div>
-  </div>
-</ng-template>`;
-    }
+  }
 
   ngOnInit(): void {
     this.metaData();

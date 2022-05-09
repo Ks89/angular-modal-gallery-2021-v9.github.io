@@ -1,9 +1,10 @@
 <div class="container">
 
   <h2 class="link clickable">
-    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Previews custom template</a>
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Previews custom template with additional data</a>
   </h2>
-  <p>Modal gallery example <b>with custom previews, using an Angular template</b>.</p>
+  <p>Modal gallery example <b>with custom previews</b>, using an Angular template and custom image-related data.</p>
+  <p>This example demonstrates how to use custom image-specific data (here, the date of the picture) to render the previews.</p>
   <br>
 
   <h3>Live Demo</h3>
@@ -11,7 +12,7 @@
   <button class="btn btn-primary btn-sm" (click)="openModal(334, 0)">Click to open modal gallery id=1 at index=0</button>
   <ng-template #previewsTemplate let-preview="preview" let-defaultTemplate="defaultTemplate">
     <div class="preview-block">
-      <div class="preview-description">{{preview?.modal?.description ?? '&nbsp;'}}</div>
+      <div class="preview-date">{{ preview.modal.pictureDate | date }}</div>
       <div class="preview-default">
         <ng-container *ngTemplateOutlet="defaultTemplate"></ng-container>
       </div>
@@ -116,20 +117,4 @@
     </table>
   </section>
 
-  <br><br>
-
-  <section>
-    <h3>Add additional data in the <code>ModalImage</code> objects</h3>
-    <p>In order to further customize the preview content, with image-related properties for instance, 
-      it's possible to add additional information to the <code>ModalImage</code> collection given to the library
-      by extending it. The information is then accessible within the custom template via the <b>let-preview</b> template variable.
-    </p>
-    <p>Example:
-      <codemirror [(ngModel)]="codeTypescript2" [config]="configTs">
-      </codemirror>
-      <codemirror [(ngModel)]="codeHtml2" [config]="configHtml">
-      </codemirror>  
-    </p>
-  </section>
-  
 </div>
