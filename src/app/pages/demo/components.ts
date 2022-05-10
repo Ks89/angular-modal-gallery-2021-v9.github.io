@@ -47,6 +47,8 @@ import { CarouselWithDescriptionComponent } from './carousel-with-description/ca
 import { CarouselOutputsComponent } from './carousel-outputs/carousel-outputs.component';
 import { CarouselBreakpointsComponent } from './carousel-breakpoints/carousel-breakpoints.component';
 import { SameImagesComponent } from './same-images/same-images.component';
+import { PreviewsTemplateComponent } from './previews-template/previews-template.component';
+import { PreviewsTemplateAdditionalDataComponent } from './previews-template-additional-data/previews-template-additional-data.component';
 
 export const DEMO_COMPONENTS = [
   DemoComponent,
@@ -69,6 +71,8 @@ export const DEMO_COMPONENTS = [
   PreviewsLengthComponent,
   PreviewsNoArrowsComponent,
   PreviewsNotClickableComponent,
+  PreviewsTemplateComponent,
+  PreviewsTemplateAdditionalDataComponent,
   AccessibilityComponent,
   ButtonsStrategiesComponent,
   ButtonsExturlNewtabComponent,
